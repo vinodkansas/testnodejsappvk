@@ -41,8 +41,8 @@ app.get("/user", function (req, res) {
 });
 
 try {
-    app.listen(process.env.PORT || 3000);
-    console.info("Server listening on " +( process.env.PORT || 3000))
+    app.listen(process.env.PORT || 80);
+    console.info("Server listening on " +( process.env.PORT || 80))
 } catch(e) {
     console.error("Failed to start server ");
     console.error(e)
