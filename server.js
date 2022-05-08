@@ -40,6 +40,11 @@ app.get("/user", function (req, res) {
   res.status(200).send({id: Math.ceil( Math.random()*100), name: random_name()});
 });
 
+//new employee
+app.get("/user/:id", function (req, res) {
+  res.status(200).send({id: req.params.id, name: random_name()});
+});
+
 try {
     app.listen(process.env.PORT || 80);
     console.info("Server listening on " +( process.env.PORT || 80))
